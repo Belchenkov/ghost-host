@@ -1,9 +1,25 @@
 @import "partials/params";
 @import "partials/mixins";
 
-// Variables
-$bg-color: purple;
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-h1 {
-  color: $bg-color;
+html, body {
+  @include clear;
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @include clear;
+}
+
+a {
+  text-decoration: none;
+}
+
+view-port {
+  min-width: $view-port;
+  margin: 0 auto;
+  background-color: #f4f4f4;
 }
