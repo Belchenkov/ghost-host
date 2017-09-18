@@ -1,0 +1,9 @@
+@import "partials/params";
+@import "partials/mixins";
+
+// Variables
+$bg-color: purple;
+
+h1 {
+  color: $bg-color;
+}
