@@ -18,8 +18,21 @@ a {
   text-decoration: none;
 }
 
-view-port {
+.view-port {
   min-width: $view-port;
   margin: 0 auto;
-  background-color: #f4f4f4;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
 }
