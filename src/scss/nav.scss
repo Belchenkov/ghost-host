@@ -18,6 +18,8 @@ $font-color: #fff;
 
   &__brand {
     margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   &__menu {
@@ -25,6 +27,7 @@ $font-color: #fff;
     margin-right: 50px;
     display: flex;
     height: $nav-height;
+    font-family: 'Asap Condensed', sans-serif;
   }
 
   &__item {
@@ -41,6 +44,8 @@ $font-color: #fff;
 
   &__link {
     color: $font-color;
+    font-family: $main-font;
+
   }
 
   &__menu-border {
