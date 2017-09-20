@@ -2,7 +2,7 @@
 @import "partials/mixins";
 
 // Variables
-$opacity: .4;
+$color: #9d9d9d;
 
 .buy {
     background-color: #fff;
@@ -17,13 +17,13 @@ $opacity: .4;
     &__title {
         font-size: 25px;
         font-weight: bold;
-        opacity: $opacity;     
+        color: $color;
         margin-bottom: 25px; 
     }
 
     &__subtitle {
         margin-bottom: 50px;
-        opacity: $opacity;
+        color: $color;
         font-weight: normal;
     }
 
@@ -43,7 +43,7 @@ $opacity: .4;
         display: flex;
         align-items: center;
         width: 10%;
-        opacity: $opacity;
+        color: $color;
     }
 
     &__input-block {
@@ -64,12 +64,47 @@ $opacity: .4;
 
     &__domain {
         margin-right: 50px;
-        opacity: $opacity;
-       
+        color: $color;
     }
 
     &__select {
+        position: relative;
         justify-content: flex-end;
+        cursor: pointer;
+
+
+        &:hover {
+            & .select__dropdown {
+                opacity: 1;
+                z-index: 999;
+            }
+        }
+
+        & .select__dropdown {
+            @include clear-list;
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: #fff;
+            top: 42px;
+            right: -6px;
+            z-index: -100;
+            border: 1px solid $buy-border-color;
+            border-bottom: none;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        & .select__item {
+            text-transform: uppercase;
+            padding: 3px 15px 1px;
+            border-bottom: 1px solid $buy-border-color;
+        }
+    }
+
+    &__icon {
+        margin-right: 20px;
+        cursor: pointer;
     }
 
     &__table {
@@ -111,7 +146,7 @@ $opacity: .4;
             &--nrb {
                 border-right: none;
             }
-        }
+       }
     }
 
 
